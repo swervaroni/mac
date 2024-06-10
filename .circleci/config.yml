@@ -1,0 +1,19 @@
+version: 2.1
+      
+      
+workflows:
+  say-hello-workflow:
+    jobs:
+      - build
+
+jobs:
+  build:
+    macos:
+      xcode: 15.1.0
+
+    steps:
+      # Commands will execute in macOS container
+      # with Xcode 14.2.0 installed
+      - run: xcodebuild -version
+      - run: system_profiler | grep Processor
+      - run: echo "what default are you mr mac?"
