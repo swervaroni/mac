@@ -10,11 +10,11 @@ jobs:
   build:
     macos:
       xcode: 15.4.0
-    resource_class: macos.m1.medium.gen1
+   # resource_class: macos.m1.medium.gen1
 
     steps:
       # Commands will execute in macOS container
       # with Xcode 14.2.0 installed
       - run: xcodebuild -version
       - run: system_profiler | grep Processor
-      - run: echo "what default are you mr mac?"
+      - run: echo "what defau  lt are you mr mac?"
